@@ -1,0 +1,43 @@
+.wrapper .form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.wrapper .form-signin .form-signin-heading,
+.wrapper .form-signin .checkbox {
+  margin-bottom: 10px;
+} 
+.wrapper .form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.wrapper .form-signin .form-control:focus {
+  z-index: 2;
+}
+.wrapper .btn-primary { 
+    color: #fff;
+    background-color: #696969;
+    border-color: #696969;
+} 
+.wrapper .btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.wrapper .right {
+    margin-top: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.24),0 0 2px rgba(0,0,0,0.12);
+    padding: 15px 25px;
+}
+.wrapper .ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.wrapper .ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-6 left">
+        <form (ngSubmit)="onSubmit($event)" #appForm="ngForm">
+        <h4>
+            NMLite
+        </h4>
+        <h2>
+            Sign In
+        </h2>
+        <div>
+            <h5>Username:</h5>
+            <input type="text" [(ngModel)]="user.username" name="username" #username="ngModel" id="inputEmail" class="form-control" required>
+             <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+                Name is required
+            </div>
+        </div>
+        <div>
+            <h5>Password</h5>
+            <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" id="inputPassword" class="form-control" required>
+            <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                Password is required
+            </div>
+        </div>
+        <div>
+            <h5>Email</h5>
+            <input type="email" [(ngModel)]="user.email" name="email" #email="ngModel" id="inputEmail" class="form-control" required autofocus>
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                Email is required
+            </div>
+        </div> 
+        <br>
+        <div>
+            <button class="btn btn-primary" type="submit" [disabled]="!appForm.form.valid">Sign in</button>
+        </div>
+        </form>
+    </div>
+    <div class="col-md-6 right">
+        <div class="rightpart">
+        <h4>Quick Changes</h4>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        </div>
+        <div class="rightpart">
+        <h4>Implement</h4>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        </div>
+        <div class="rightpart">
+        <h4>Number Rerouting</h4>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+        </div>
+    </div>
+</div>      
+<hr>      
+<test-app></test-app> 
