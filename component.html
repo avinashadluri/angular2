@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    Angular 2
+  </title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="three columns">
+        <div id="sidebar" class="sidebar">
+          <h3>Angular 2</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nine columns">
+        <h3>Components</h3>
+        <p>In Angular 2, Components are the main way we build and specify elements and logic on the page.</p>
+        <p>In Angular 1, we achieved this through directives, controllers, and scope. In Angular 2, all those concepts are combined
+          into Components.</p>
+        <h3 id="a-simple-component">A simple component</h3>
+        <p>Here’s a simple 
+          <a href="https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html">Component</a> that renders our name, and a button that triggers a method to print our name to the console:
+        </p>
+        <div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code>
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  template: `&lt;div&gt;Hello my name is {{name}}. &lt;button (click)="sayMyName()"&gt;Say my name&lt;/button&gt;&lt;/div&gt; `
+})
+export class MyComponent {
+  constructor() {
+    this.name = 'Max'
+  }
+  sayMyName() {
+    console.log('My name is', this.name)
+  }
+}
+</code></pre>
+        </div>
+        <p> When we use the <code class="highlighter-rouge">&lt;my-component&gt;&lt;/my-component&gt;</code> tag in our HTML, this component will be created, our constructor called, and rendered.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container">
+      Built by the <a target="_Blank" href="https://avinashrajuadluri.github.io/">Avinash Raju Adluri</a>.
+    </div>
+  </footer>
+</body>
+</html>
