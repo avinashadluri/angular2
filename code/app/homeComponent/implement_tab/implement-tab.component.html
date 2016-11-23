@@ -1,0 +1,63 @@
+<div class="">
+<div class="container">
+   <label class="radio-inline">
+      Search By:
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked="checked" (change)="implementSearch('searchNumber')">Number
+      </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" (change)="implementSearch('searchSet')">Set
+      </label>
+  </div>
+  <div class="mrg-top"></div>
+<div class="container" *ngIf="selectedRadio == 'searchNumber'">
+	<div class="col-md-4">
+	  <label class="col-md-3" for="name">Number</label>	
+	  <!--input type="number" id="implementNumberSearch" placeholder="Type Number" required name="implementNumberSearch"
+      	[(ngModel)]="implementNumberSearch"-->
+				<div class="col-md-9">
+				<select class="form-control" [(ngModel)]="implementNumberSelect" (change)="selectedNumber()">
+					<option selected>123456789</option>
+					<option>789456123</option>
+					<option>779123456</option>
+					<option>456789123</option>
+					<option>123789456</option>
+				</select>
+				</div>
+	</div>
+	<div class="col-md-4">
+			<button type="" (click)="numberGo()">Go</button>
+		</div> 
+</div>
+
+<div class="container" *ngIf="selectedRadio == 'searchSet'">
+	<div class="col-md-4">
+			  <label class="col-md-3" for="name">Customer ID</label>	
+				<div class="col-md-9">
+				<select class="form-control" [(ngModel)]="customerId" (change)="selectedCustomerId()">
+					<option selected>123456789</option>
+					<option>789456123</option>
+					<option>779123456</option>
+					<option>456789123</option>
+					<option>123789456</option>
+				</select>
+				</div>
+	</div>
+	<div class="col-md-4" *ngIf="showSetId">
+			  <label class="col-md-3" for="name">Set ID</label>	
+				<div class="col-md-9">
+				<select class="form-control" [(ngModel)]="setId" (change)="selectedSetId()">
+					<option selected>011</option>
+					<option>012</option>
+					<option>013</option>
+					<option>014</option>
+					<option>015</option>
+				</select>
+				</div>
+		</div>
+		<div class="col-md-4" *ngIf="showSetId">
+			<button type="" (click)="setGo()" >Go</button>
+		</div>
+</div>
+</div>

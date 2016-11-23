@@ -18,10 +18,13 @@ var loginComponent = (function () {
             password: '',
             email: ''
         };
+        if (window.localStorage.getItem("userLoggedIn") == "true")
+            router.navigate(['home']);
     }
     loginComponent.prototype.signIn = function (event) {
         event.preventDefault();
         if (this.user.username === 'admin' && this.user.password === 'admin') {
+            window.localStorage.setItem("userLoggedIn", "true");
             this.errShow = false;
             this.router.navigate(['home']);
         }

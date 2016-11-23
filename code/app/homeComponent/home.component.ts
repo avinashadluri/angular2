@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
    <main-dismiss-alert></main-dismiss-alert>
    <home-tab-pane></home-tab-pane>`
 })
-export class homeComponent { }
+export class homeComponent {
+  constructor(){}
+  
+ }

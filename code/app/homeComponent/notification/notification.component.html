@@ -1,0 +1,12 @@
+<div *ngIf="homeTab">
+    <h4>Notifications</h4>
+    <div class="notification-container container" >
+        <div class="col-md-12">
+            <h4>November 6th 2016, Sunday</h4>
+               <p *ngFor="let notification of homeTab.notificationDetails">
+                <span class="col-md-2">{{notification.notificationType}}: </span>
+                <span class="col-md-10">{{notification.notificationDesc}}</span>
+             <p>
+        </div>
+    </div>
+</div>

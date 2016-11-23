@@ -1,0 +1,69 @@
+
+<div>
+  <label class="radio-inline">
+      Search By:
+  </label>
+  <label class="radio-inline">
+      <input type="radio" name="optradio" checked="checked" (change)="searchByPlan('SearchByNumber')">Number Level Plan
+  </label>
+  <label class="radio-inline">
+      <input type="radio" name="optradio" (change)="searchByPlan('SearchByRouting')">Super Routing Plan
+  </label>
+  <label class="radio-inline">
+      <input type="radio" name="optradio" (change)="searchByPlan('SearchByStructure')">Structure
+  </label>
+</div>
+ <div class="mrg-top"></div>
+      <div class="" *ngIf="activeTab == 'SearchByNumber'">
+        <div class="form-group row">
+          <label for="numberId" class="col-xs-1 col-form-label">Number</label>
+          <div class="col-xs-4">
+            <input class="form-control" type="text" id="numberId"  placeholder="Type Number">
+            </div>
+          </div>
+      </div>
+
+      <div class="" *ngIf="activeTab == 'SearchByRouting'">
+          <div class="form-group row">
+            <label for="customerId" class="col-xs-2 col-form-label">Customer ID</label>
+            <div class="col-xs-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter or Select Customer Id" aria-describedby="customerId">
+                  <span class="input-group-addon glyphicon glyphicon-triangle-bottom" id="customerId"></span>
+                </div>
+              </div>
+            </div>
+      </div>
+
+      <div class="container" *ngIf="activeTab == 'SearchByStructure'">
+      <div class="col-md-12">
+            <div class="form-group row">
+              <label for="customerId" class="col-xs-2 col-form-label">Customer ID</label>
+              <div class="col-xs-3" >
+                <div class="input-group">
+                  <input type="text" class="form-control" [(ngModel)]="phoneNumber" (blur) ="EnableStruc(phoneNumber)" placeholder="Enter or Select Customer Id" aria-describedby="customerId">
+                    <span class="input-group-addon glyphicon glyphicon-triangle-bottom" id="customerId"></span>
+                  </div>
+                </div>
+
+                <div *ngIf="EnableStructureName">
+                  <label for="customerId" class="col-xs-2 col-form-label">Structure Name</label>
+                  <div class="col-xs-3" >
+                    <div class="input-group">
+                      <input type="text" class="form-control" [(ngModel)]="structureName" placeholder="Type Structure Name" aria-describedby="customerId">
+                      </div>
+                    </div>
+                    <div class="col-xs-2" >
+                      <div class="input-group">
+                        <input type="button" class="form-control" value = "GO" aria-describedby="customerId"  (click)="showNotifications(structureName)">
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>  
+          </div>
+
+    
+
+
+

@@ -9,23 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var notification_component_1 = require('../notification/notification.component');
 var homeTabPaneComponent = (function () {
     function homeTabPaneComponent() {
-        this.title = "Search Routing Plans";
         this.tabInd = 1;
-        this.placeHolder = 'Search By Number';
+        this.notificationClass = new notification_component_1.notification();
     }
     homeTabPaneComponent.prototype.tabChange = function (tabIndex) {
         this.tabInd = tabIndex;
     };
-    homeTabPaneComponent.prototype.searchByPlan = function (selectedPlan) {
-        this.placeHolder = selectedPlan;
+    homeTabPaneComponent.prototype.goClicked1 = function (info) {
+        this.notificationData = info;
+        this.notificationClass.notificationFunction(this.notificationData);
     };
     homeTabPaneComponent = __decorate([
         core_1.Component({
             selector: 'home-tab-pane',
             templateUrl: 'app/homeComponent/home_tabPane/home-tab-pane.html',
-            styleUrls: ['app/homeComponent/home_tabPane/home-tab-pane.component.css']
+            styleUrls: ['app/homeComponent/home_tabPane/home-tab-pane.component.css'] /*,
+            directives : [quickChangesTabComponent]*/
         }), 
         __metadata('design:paramtypes', [])
     ], homeTabPaneComponent);

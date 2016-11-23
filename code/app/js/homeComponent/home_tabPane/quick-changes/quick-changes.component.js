@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var Root = (function () {
-    function Root(router) {
-        this.router = router;
+var QuickChangesTab = (function () {
+    function QuickChangesTab() {
     }
-    Root = __decorate([
+    QuickChangesTab = __decorate([
         core_1.Component({
-            selector: '.app-root',
-            templateUrl: 'app/rootComponent/root.component.html',
+            selector: 'Quick-changes-tab',
+            templateUrl: 'app/homeComponent/home_tabPane/quick_changes/quick_changes.html',
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], Root);
-    return Root;
+        __metadata('design:paramtypes', [])
+    ], QuickChangesTab);
+    return QuickChangesTab;
 }());
-exports.Root = Root;
-//# sourceMappingURL=root.component.js.map
+exports.QuickChangesTab = QuickChangesTab;
+//# sourceMappingURL=quick-changes.component.js.map

@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class loginComponent {
   constructor(public router: Router) {
-  }
+    if( window.localStorage.getItem("userLoggedIn") == "true")
+      router.navigate(['home']);
+    }
    user = {
     username:'',
     password:'',
@@ -19,6 +21,7 @@ export class loginComponent {
   	signIn(event){
     event.preventDefault();
 	  	if(this.user.username === 'admin' && this.user.password === 'admin'){
+        window.localStorage.setItem("userLoggedIn","true");
 	  		this.errShow= false;
         this.router.navigate(['home']);
 	  		}

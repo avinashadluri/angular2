@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: '.container-fluid',
-  template: '<router-outlet></router-outlet>',
+  selector: '.app-root',
+  templateUrl: 'app/rootComponent/root.component.html',
 })
 
 export class Root {
