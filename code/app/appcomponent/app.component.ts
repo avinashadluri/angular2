@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TestComponent } from './testcomponent/test.component';
 
 @Component({
   selector: '.wrapper',

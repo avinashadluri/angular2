@@ -1,0 +1,106 @@
+<div class="container" id="wrapper">
+      <div class="row">
+        <div class="col-md-6 left">
+          <form #signinForm="ngForm">
+            <h4>
+              NMLite
+            </h4>
+            <h2>
+              Sign In
+            </h2>
+          <!--  <div>
+              <h5>Username</h5>
+              <input type="email" id="inputEmail" class="form-control" name="first" [(ngModel)]="firstName" required autofocus>
+
+            </div>-->
+
+              <label for="name">Username</label>
+            <input type="text" id="name" class="form-control"
+       required minlength="4" maxlength="24"
+       name="name" [(ngModel)]="user.username"
+       #name="ngModel" (blur)="chkInput()">
+
+          <div *ngIf="name.errors && (name.dirty || name.touched)"
+               class="alert alert-danger">
+              <div [hidden]="!name.errors.required">
+                Name is required
+              </div>
+              <div [hidden]="!name.errors.minlength">
+                Name must be at least 4 characters long.
+              </div>
+              <div [hidden]="!name.errors.maxlength">
+                Name cannot be more than 24 characters long.
+              </div>
+          </div>
+           
+
+        <!--  <div>
+              <h5>Password</h5>
+              <input type="password" id="inputPassword" [(ngModel)]="pwd" name="pwd"  class="form-control" required>
+            </div>-->
+              <label for="password">Password</label>
+            <input type="password" id="inputPassword" class="form-control"
+       required minlength="4" maxlength="24"
+       name="pwd" [(ngModel)]="user.password"
+       #pwd="ngModel" (blur)="chkInput()">
+
+          <div *ngIf="pwd.errors && (pwd.dirty || pwd.touched)"
+               class="alert alert-danger">
+              <div [hidden]="!pwd.errors.required">
+                Password is required
+              </div>
+            <div [hidden]="!pwd.errors.minlength">
+                Password must be at least 4 characters long.
+              </div>
+              <div [hidden]="!pwd.errors.maxlength">
+                Password cannot be more than 24 characters long.
+              </div>
+          </div>
+            <!-- <div>
+              <h5>Email</h5>
+              <input type="email" id="inputEmail" class="form-control" [(ngModel)]="email" name="email"  required autofocus>
+            </div> -->
+           <label for="email">Email</label>
+            <input type="email" id="inputEmail" class="form-control"
+       required name="email" [(ngModel)]="user.email"
+       #email="ngModel" >
+
+        <div *ngIf="email.errors && (email.dirty || email.touched)"
+               class="alert alert-danger">
+              <div [hidden]="!email.errors.required ">
+                Email is required
+              </div>
+          </div>
+
+            <br>
+            <div>
+              <button class="btn btn-lg btn-primary btn-block" type="" (click)="signIn($event)"  [disabled]="!signinForm.form.valid">Sign in</button>
+            </div>
+          </form>
+          <!--<button-control></button-control>-->
+        </div>
+        <div class="col-md-6 right">
+          <div class="rightpart">
+            <h4>Quick Changes</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="rightpart">
+            <h4>Implement</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="rightpart">
+            <h4>Number Rerouting</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div [hidden]="!errShow" class="col-md-6 alert alert-danger">Username/Password is incorrect</div>
+    </div> 
+ 
+    

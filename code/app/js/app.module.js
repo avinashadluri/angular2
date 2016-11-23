@@ -11,16 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var app_component_1 = require('./appcomponent/app.component');
-var test_component_1 = require('./testcomponent/test.component');
+var app_routing_module_1 = require('./route/app-routing.module');
+var root_component_1 = require('./rootComponent/root.component');
+var home_component_1 = require('./homeComponent/home.component');
+var login_component_1 = require('./loginComponents/login.component');
+var menu_component_1 = require('./commonComponents/menu/menu.component');
+var number_routing_component_1 = require('./numberRoutingComponents/number-routing.component');
+var main_dismiss_alert_component_1 = require('./homeComponent/home_dismiss_alert/main-dismiss-alert.component');
+var home_tab_pane_component_1 = require('./homeComponent/home_tabPane/home-tab-pane.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, test_component_1.TestComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_module_1.AppRoutingModule],
+            declarations: [root_component_1.Root, login_component_1.loginComponent, home_component_1.homeComponent, menu_component_1.menuComponent,
+                main_dismiss_alert_component_1.mainDismissAlertComponent, number_routing_component_1.numberRoutingComponent,
+                home_tab_pane_component_1.homeTabPaneComponent],
+            bootstrap: [root_component_1.Root]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

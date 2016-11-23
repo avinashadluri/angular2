@@ -1,0 +1,9 @@
+.navbar-header{
+				min-height:80px;
+}
+.nav{
+    padding-top:12px;
+}
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}

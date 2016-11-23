@@ -1,0 +1,42 @@
+
+
+<div class="container">
+<div><h3>{{title}}</h3></div>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="tabChange(1)">Quick Changes</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default" (click)="tabChange(2)">Implement</button>
+  </div>
+</div>
+</div>
+
+<div class="mrg-top"></div>
+<div class="container">
+  <div *ngIf="tabInd == 1" class="text-center bg-success"> Quick Changes</div>
+  <div *ngIf="tabInd == 2" class="text-center bg-warning"> Implement</div>
+<div class="mrg-top"></div>
+<form>
+   <label class="radio-inline">
+      Search By:
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" checked="checked" (change)="searchByPlan('Search By Number')">Number Level Plan
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" (change)="searchByPlan('Search By Routing')">Super Routing Plan
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio" (change)="searchByPlan('Search By Structure')">Structure
+    </label>
+  </form>
+</div>
+
+<div class="mrg-top"></div>
+<div class="container">
+	<div class="input-group">
+	  <input type="text" class="form-control" placeholder="{{placeHolder}}" aria-describedby="basic-addon2">
+	  <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon2"></span>
+	</div>
+</div>
