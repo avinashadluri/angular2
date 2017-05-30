@@ -1,0 +1,11 @@
+<h3>{{directiveTitle}}</h3>
+<div *ngIf='showText'>
+  <p> *ngIf directive </p>
+</div>
+<hr>
+<div>
+  <p>*ngFor directive</p>
+  <ul *ngFor="let product of products">
+    <li>{{product.name}}</li>
+  </ul>
+</div>
