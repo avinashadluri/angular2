@@ -14,7 +14,11 @@ export class DirectivesComponent implements OnInit {
     { name:"three"},
     { name:"four"},
   ];
-
+  showEventEmittedText:number;
+  onNotify(message: number):void {
+    console.log(message);
+    this.showEventEmittedText = message;
+  }
 
 
 

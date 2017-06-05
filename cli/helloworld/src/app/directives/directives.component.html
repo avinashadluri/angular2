@@ -9,3 +9,11 @@
     <li>{{product.name}}</li>
   </ul>
 </div>
+
+
+<app-databinding 
+  [test]="sampleNumber"
+  (notify)="onNotify($event)"
+  >
+</app-databinding>
+{{showEventEmittedText}}
